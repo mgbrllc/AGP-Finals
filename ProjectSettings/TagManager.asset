@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - bacteria1
+  - bacteria2
+  - splitting bacteria
+  - bacteria clone
   - Bacteria
+  - bacteria4
   layers:
   - Default
   - TransparentFX
@@ -44,6 +49,9 @@ TagManager:
     locked: 0
   - name: Entity
     uniqueID: 2038568489
+    locked: 0
+  - name: U
+    uniqueID: 3054667941
     locked: 0
   m_RenderingLayers:
   - Default

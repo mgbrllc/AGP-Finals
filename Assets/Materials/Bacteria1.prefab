@@ -10,15 +10,15 @@ GameObject:
   m_Component:
   - component: {fileID: 2778963783847706814}
   - component: {fileID: 2694380425383126784}
-  - component: {fileID: 1219397624145192958}
   - component: {fileID: 3559218062749241400}
   - component: {fileID: -3890038450779619980}
   - component: {fileID: -6057786644446823488}
   - component: {fileID: 5688037124548524265}
-  - component: {fileID: -4351680392884581155}
+  - component: {fileID: 5769379369063781650}
+  - component: {fileID: 6584529374888581404}
   m_Layer: 31
   m_Name: Bacteria1
-  m_TagString: Bacteria
+  m_TagString: splitting bacteria
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,33 +93,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &1219397624145192958
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7820020239586440224}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &3559218062749241400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,8 +178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553443937359544fdb7db180ff71838e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &-4351680392884581155
-BoxCollider2D:
+--- !u!60 &5769379369063781650
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -249,5 +222,63 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.49, y: 0.63}
+  m_Points:
+    m_Paths:
+    - - {x: 0.2227633, y: 0.33539447}
+      - {x: 0.065, y: 0.315}
+      - {x: 0.005, y: 0.24499999}
+      - {x: -0.005, y: 0.21499999}
+      - {x: -0.235, y: -0.095}
+      - {x: -0.24499999, y: -0.125}
+      - {x: -0.26947337, y: -0.35171008}
+      - {x: -0.044999998, y: -0.315}
+      - {x: -0.06281084, y: -0.2078042}
+      - {x: 0.24499999, y: 0.145}
+      - {x: 0.25723672, y: 0.28460553}
+  m_UseDelaunayMesh: 0
+--- !u!61 &6584529374888581404
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7820020239586440224}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.010197222, y: -0.0040789396}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.49, y: 0.63}
+    newSize: {x: 0.49, y: 0.63}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.73881257, y: 0.84210265}
   m_EdgeRadius: 0
