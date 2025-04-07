@@ -66,12 +66,14 @@ public class level1Script : MonoBehaviour
                 {
                     Destroy(currentBacteria.gameObject);
                     counter1 = Mathf.Max(counterLimit, counter1 - 1);
+                    timer += 3;
                     UpdateTaskText();
                 }
                 else if (currentBacteria.CompareTag("bacteria2") && counter2 > counterLimit)
                 {
                     Destroy(currentBacteria.gameObject);
                     counter2 = Mathf.Max(counterLimit, counter2 - 1);
+                    timer += 1;
                     UpdateTaskText();
                 }
             }

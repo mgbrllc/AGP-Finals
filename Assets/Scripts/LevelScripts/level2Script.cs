@@ -63,12 +63,14 @@ public class level2Script : MonoBehaviour
                 {
                     Destroy(currentBacteria.gameObject);
                     counter1--;
+                    timer += 3;
                     UpdateTaskText();
                 }
                 else if (currentBacteria.CompareTag("bacteria2"))
                 {
                     Destroy(currentBacteria.gameObject);
                     counter2--;
+                    timer += 1;
                     UpdateTaskText();
                 }
                 else if (currentBacteria.CompareTag("splitting bacteria"))
@@ -88,6 +90,7 @@ public class level2Script : MonoBehaviour
                 {
                     Destroy(currentBacteria.gameObject);
                     counter3--;
+                    timer += 2;
                     UpdateTaskText();
                 }
             }

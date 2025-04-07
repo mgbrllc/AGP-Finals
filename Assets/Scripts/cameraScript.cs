@@ -9,23 +9,45 @@ public class SlipperyCamera2D : MonoBehaviour
 
     [Header("Zoom")]
     public float zoomSpeed = 5f;
-    public float minZoom = 1f;   // closer in
-    public float maxZoom = 3f;           // Furthest zoom
+    public float minZoom = 1f;   // Closer in
+    public float maxZoom = 3f;   // Further out
+
+    [Header("Background Reference")]
+    public SpriteRenderer background; // Drag your background sprite here
 
     private Vector2 velocity = Vector2.zero;
     private Camera cam;
+
+    private float minX, maxX, minY, maxY;
 
     void Start()
     {
         cam = GetComponent<Camera>();
         if (cam == null)
-            Debug.LogError("SlipperyCamera2D script must be attached to the Camera object!");
+        {
+            Debug.LogError("SlipperyCamera2D must be attached to a Camera!");
+            return;
+        }
+
+        if (background != null)
+        {
+            Bounds bounds = background.bounds;
+            minX = bounds.min.x;
+            maxX = bounds.max.x;
+            minY = bounds.min.y;
+            maxY = bounds.max.y;
+        }
+        else
+        {
+            Debug.LogError("No background assigned to SlipperyCamera2D!");
+        }
     }
 
     void Update()
     {
         HandleMovement();
         HandleZoom();
+        ClampToBackground();
     }
 
     void HandleMovement()
@@ -52,5 +74,18 @@ public class SlipperyCamera2D : MonoBehaviour
             float targetZoom = cam.orthographicSize - scroll * zoomSpeed;
             cam.orthographicSize = Mathf.Clamp(targetZoom, minZoom, maxZoom);
         }
+    }
+
+    void ClampToBackground()
+    {
+        if (background == null) return;
+
+        float vertExtent = cam.orthographicSize;
+        float horzExtent = vertExtent * cam.aspect;
+
+        float clampedX = Mathf.Clamp(transform.position.x, minX + horzExtent, maxX - horzExtent);
+        float clampedY = Mathf.Clamp(transform.position.y, minY + vertExtent, maxY - vertExtent);
+
+        transform.position = new Vector3(clampedX, clampedY, transform.position.z);
     }
 }

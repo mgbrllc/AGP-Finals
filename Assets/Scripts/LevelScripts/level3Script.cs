@@ -64,12 +64,14 @@ public class level3Script : MonoBehaviour
                 {
                     Destroy(currentBacteria.gameObject);
                     counter1--;
+                    timer += 3;
                     UpdateTaskText();
                 }
                 else if (currentBacteria.CompareTag("bacteria2"))
                 {
                     Destroy(currentBacteria.gameObject);
                     counter2--;
+                    timer += 1;
                     UpdateTaskText();
                 }
                 else if (currentBacteria.CompareTag("splitting bacteria"))
@@ -90,6 +92,7 @@ public class level3Script : MonoBehaviour
                     Destroy(currentBacteria.gameObject);
                     counter3--;
                     UpdateTaskText();
+                    timer += 2;
                 }
                 else if (currentBacteria.CompareTag("bacteria4"))
                 {
@@ -108,6 +111,7 @@ public class level3Script : MonoBehaviour
                         {
                             Destroy(currentBacteria.gameObject);
                             counter4--;
+                            timer += 2;
                             UpdateTaskText();
                             Debug.Log("Bacteria4 destroyed after joint was broken.");
                         }

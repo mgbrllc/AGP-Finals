@@ -511,13 +511,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e3f0dc88e00e7488e9fbee374ee623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSelect: {fileID: 1655997317}
   exit: {fileID: 252189426}
   back: {fileID: 1554286349}
   guide: {fileID: 121678419}
   guideBack: {fileID: 1554286349}
   logo: {fileID: 1967744512}
-  levelSelectParent: {fileID: 285106169}
   guidePageParent: {fileID: 2023520955}
 --- !u!1 &90249440
 GameObject:
@@ -995,9 +993,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1650050480}
-        m_TargetAssemblyTypeName: levelManager, Assembly-CSharp
-        m_MethodName: LoadLevel
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1708,6 +1706,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424774166}
   m_CullTransparentMesh: 1
+--- !u!1 &462684376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 462684378}
+  - component: {fileID: 462684377}
+  m_Layer: 0
+  m_Name: sceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &462684377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462684376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5127476e29a87554e8fb3846385cda81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &462684378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462684376}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.192612, y: -3.5920722, z: 133.28989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &498119136
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,9 +3012,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650050479}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 786.6106, y: 707.32434, z: -3.8826437}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3170,7 +3212,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1655997318}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 462684377}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LevelSelection
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1655997318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3292,9 +3346,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1650050480}
-        m_TargetAssemblyTypeName: levelManager, Assembly-CSharp
-        m_MethodName: LoadLevel
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3425,9 +3479,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1650050480}
-        m_TargetAssemblyTypeName: levelManager, Assembly-CSharp
-        m_MethodName: LoadLevel
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4084,3 +4138,4 @@ SceneRoots:
   - {fileID: 285106173}
   - {fileID: 1650050482}
   - {fileID: 1034760491}
+  - {fileID: 462684378}
