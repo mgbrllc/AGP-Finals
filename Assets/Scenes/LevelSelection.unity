@@ -475,9 +475,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1111026476}
-        m_TargetAssemblyTypeName: levelManager, Assembly-CSharp
-        m_MethodName: LoadLevel
+      - m_Target: {fileID: 1111026479}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -612,7 +612,6 @@ GameObject:
   - component: {fileID: 442327643}
   - component: {fileID: 442327642}
   - component: {fileID: 442327641}
-  - component: {fileID: 442327640}
   m_Layer: 5
   m_Name: levelSelect
   m_TagString: Untagged
@@ -620,18 +619,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &442327640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442327639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 838aada917074244dbdc0969449b2ad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &442327641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -808,7 +795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1111026478}
   - component: {fileID: 1111026477}
-  - component: {fileID: 1111026476}
+  - component: {fileID: 1111026479}
   m_Layer: 0
   m_Name: manager
   m_TagString: Untagged
@@ -816,18 +803,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1111026476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111026475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 838aada917074244dbdc0969449b2ad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1111026477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -840,13 +815,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e3f0dc88e00e7488e9fbee374ee623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSelect: {fileID: 0}
   exit: {fileID: 0}
   back: {fileID: 0}
   guide: {fileID: 0}
   guideBack: {fileID: 0}
   logo: {fileID: 0}
-  levelSelectParent: {fileID: 0}
   guidePageParent: {fileID: 0}
 --- !u!4 &1111026478
 Transform:
@@ -863,6 +836,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1111026479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111026475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5127476e29a87554e8fb3846385cda81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1803836711
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,9 +931,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1111026476}
-        m_TargetAssemblyTypeName: levelManager, Assembly-CSharp
-        m_MethodName: LoadLevel
+      - m_Target: {fileID: 1111026479}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1079,9 +1064,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1111026476}
-        m_TargetAssemblyTypeName: levelManager, Assembly-CSharp
-        m_MethodName: LoadLevel
+      - m_Target: {fileID: 1111026479}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
