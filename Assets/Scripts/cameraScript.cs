@@ -43,6 +43,7 @@ public class SlipperyCamera2D : MonoBehaviour
 
     void HandleMovement()
     {
+        //WASD Movmement
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
         Vector2 inputDir = new Vector2(moveX, moveY).normalized;

@@ -104,7 +104,7 @@ public class level3Script : MonoBehaviour
 
                         if (joint != null)
                         {
-                            jointScript.OnJointDestroyed(); // ?? Custom method to destroy joint + visual
+                            jointScript.OnJointDestroyed(); 
                             Debug.Log("Joint destroyed! Hit again to destroy bacteria.");
                         }
                         else
