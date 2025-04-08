@@ -63,14 +63,14 @@ public class level3Script : MonoBehaviour
                 if (currentBacteria.CompareTag("bacteria1"))
                 {
                     Destroy(currentBacteria.gameObject);
-                    counter1--;
+                    counter1 = Mathf.Max(counterLimit, counter1 - 1);
                     timer += 3;
                     UpdateTaskText();
                 }
                 else if (currentBacteria.CompareTag("bacteria2"))
                 {
                     Destroy(currentBacteria.gameObject);
-                    counter2--;
+                    counter2 = Mathf.Max(counterLimit, counter2 - 1);
                     timer += 1;
                     UpdateTaskText();
                 }
@@ -90,7 +90,7 @@ public class level3Script : MonoBehaviour
                 else if (currentBacteria.CompareTag("Bacteria")) // <-- Clones
                 {
                     Destroy(currentBacteria.gameObject);
-                    counter3--;
+                    counter3 = Mathf.Max(counterLimit, counter3 - 1);
                     UpdateTaskText();
                     timer += 2;
                 }
@@ -110,7 +110,7 @@ public class level3Script : MonoBehaviour
                         else
                         {
                             Destroy(currentBacteria.gameObject);
-                            counter4--;
+                            counter4 = Mathf.Max(counterLimit, counter4 - 1);
                             timer += 2;
                             UpdateTaskText();
                             Debug.Log("Bacteria4 destroyed after joint was broken.");
@@ -118,11 +118,11 @@ public class level3Script : MonoBehaviour
                     }
                 }
 
-                if (counter1 <= 0 && counter2 <= 0 && counter3 <= 0)
+                if (counter1 <= 0 && counter2 <= 0 && counter3 <= 0 && counter4 <= 0)
                 {
                     winScreenParent.gameObject.SetActive(true);
                 }
-                else if (timer <= 0 && (counter1 != 0 || counter2 != 0 || counter3 != 0))
+                else if (timer <= 0 && (counter1 != 0 || counter2 != 0 || counter3 != 0 || counter4 != 0))
                 {
                     loseScreenParent.gameObject.SetActive(true);
                     timerParent.gameObject.SetActive(false);

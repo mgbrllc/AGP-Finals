@@ -62,14 +62,14 @@ public class level2Script : MonoBehaviour
                 if (currentBacteria.CompareTag("bacteria1"))
                 {
                     Destroy(currentBacteria.gameObject);
-                    counter1--;
+                    counter1 = Mathf.Max(counterLimit, counter1 - 1);
                     timer += 3;
                     UpdateTaskText();
                 }
                 else if (currentBacteria.CompareTag("bacteria2"))
                 {
                     Destroy(currentBacteria.gameObject);
-                    counter2--;
+                    counter2 = Mathf.Max(counterLimit, counter2 - 1);
                     timer += 1;
                     UpdateTaskText();
                 }
@@ -89,7 +89,7 @@ public class level2Script : MonoBehaviour
                 else if (currentBacteria.CompareTag("Bacteria")) // <-- Clones
                 {
                     Destroy(currentBacteria.gameObject);
-                    counter3--;
+                    counter3 = Mathf.Max(counterLimit, counter3 - 1);
                     timer += 2;
                     UpdateTaskText();
                 }
