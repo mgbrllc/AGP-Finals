@@ -6,7 +6,7 @@ using System.Reflection.Emit;
 
 public class level2Script : MonoBehaviour
 {
-    public GameObject uiPopup; // Laser visual
+    public GameObject uiPopup;
     private bool isCollidingWithBacteria = false;
     private Collider2D currentBacteria;
     int counter1, counter2, counter3, counterLimit;
@@ -51,7 +51,6 @@ public class level2Script : MonoBehaviour
             }
         }
 
-        // On mouse release (fire)
         if (Input.GetKeyUp(KeyCode.Space))
         {
             if (uiPopup != null)
@@ -83,10 +82,10 @@ public class level2Script : MonoBehaviour
                     foreach (Vector3 offset in new[] { Vector3.left * 0.5f, Vector3.right * 0.5f })
                     {
                         GameObject clone = Instantiate(bacteriaPrefab, pos + offset, rot);
-                        clone.tag = "Bacteria"; // clones are now normal bacteria
+                        clone.tag = "Bacteria";
                     }
                 }
-                else if (currentBacteria.CompareTag("Bacteria")) // <-- Clones
+                else if (currentBacteria.CompareTag("Bacteria")) 
                 {
                     Destroy(currentBacteria.gameObject);
                     counter3 = Mathf.Max(counterLimit, counter3 - 1);
@@ -136,7 +135,7 @@ public class level2Script : MonoBehaviour
         if (other.CompareTag("bacteria1") ||
             other.CompareTag("bacteria2") ||
             other.CompareTag("splitting bacteria") ||
-            other.CompareTag("Bacteria")) // <-- Clones
+            other.CompareTag("Bacteria")) 
         {
             isCollidingWithBacteria = true;
             currentBacteria = other;

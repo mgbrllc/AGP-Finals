@@ -6,7 +6,7 @@ using System.Reflection.Emit;
 
 public class level1Script : MonoBehaviour
 {
-    public GameObject uiPopup; // Laser visual
+    public GameObject uiPopup;
     private bool isCollidingWithBacteria = false;
     private Collider2D currentBacteria;
     int counter1, counter2, counterLimit;
@@ -42,7 +42,6 @@ public class level1Script : MonoBehaviour
         UpdateTimer();
         timer -= Time.deltaTime;
 
-        // Show laser while holding
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (uiPopup != null)
@@ -54,7 +53,6 @@ public class level1Script : MonoBehaviour
             }
         }
 
-        // On mouse release (fire)
         if (Input.GetKeyUp(KeyCode.Space))
         {
             if (uiPopup != null)

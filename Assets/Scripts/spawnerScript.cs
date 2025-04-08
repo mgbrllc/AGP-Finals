@@ -22,7 +22,7 @@ public class spawnerScript : MonoBehaviour
     [Header("Spawn Settings")]
     public float startSpawnDelay = 0f;
     public float minSpawnDelay = 0.1f;
-    public float spawnAccelerateRate = 0.05f; // How fast it speeds up
+    public float spawnAccelerateRate = 0.05f;
 
     private float currentSpawnDelay;
     private float timeSinceLastSpawn = 0f;
@@ -40,27 +40,22 @@ public class spawnerScript : MonoBehaviour
             yield return new WaitForSeconds(currentSpawnDelay);
             SpawnEnemy();
 
-            // Reduce spawn delay over time until it hits the minimum
             currentSpawnDelay = Mathf.Max(minSpawnDelay, currentSpawnDelay - spawnAccelerateRate);
         }
     }
 
     void SpawnEnemy()
     {
-        // Calculate grid cell size
         float cellWidth = (maxX - minX) / gridColumns;
         float cellHeight = (maxY - minY) / gridRows;
 
-        // Pick a random grid cell
         int gridX = Random.Range(0, gridColumns);
         int gridY = Random.Range(0, gridRows);
 
-        // Spawn position within that cell with slight offset
         float spawnX = minX + (gridX * cellWidth) + Random.Range(-0.5f, 0.5f);
         float spawnY = minY + (gridY * cellHeight) + Random.Range(-0.5f, 0.5f);
         Vector2 spawnPosition = new Vector2(spawnX, spawnY);
 
-        // Randomly select an enemy prefab
         GameObject[] enemyOptions = { enemy1, enemy2, enemy3, enemy4 };
         GameObject chosenEnemy = enemyOptions[Random.Range(0, enemyOptions.Length)];
 
@@ -68,10 +63,7 @@ public class spawnerScript : MonoBehaviour
         {
             GameObject spawnedBacteria = Instantiate(chosenEnemy, spawnPosition, Quaternion.identity);
             CollideBacteria bScript = spawnedBacteria.GetComponent<CollideBacteria>();
-            if (bScript != null)
-            {
-                // Assign additional logic if needed
-            }
+
         }
     }
 }

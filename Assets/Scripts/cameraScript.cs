@@ -9,11 +9,11 @@ public class SlipperyCamera2D : MonoBehaviour
 
     [Header("Zoom")]
     public float zoomSpeed = 5f;
-    public float minZoom = 1f;   // Closer in
-    public float maxZoom = 3f;   // Further out
+    public float minZoom = 1f; 
+    public float maxZoom = 3f;   
 
     [Header("Background Reference")]
-    public SpriteRenderer background; // Drag your background sprite here
+    public SpriteRenderer background; 
 
     private Vector2 velocity = Vector2.zero;
     private Camera cam;
@@ -23,11 +23,6 @@ public class SlipperyCamera2D : MonoBehaviour
     void Start()
     {
         cam = GetComponent<Camera>();
-        if (cam == null)
-        {
-            Debug.LogError("SlipperyCamera2D must be attached to a Camera!");
-            return;
-        }
 
         if (background != null)
         {
@@ -36,10 +31,6 @@ public class SlipperyCamera2D : MonoBehaviour
             maxX = bounds.max.x;
             minY = bounds.min.y;
             maxY = bounds.max.y;
-        }
-        else
-        {
-            Debug.LogError("No background assigned to SlipperyCamera2D!");
         }
     }
 

@@ -4498,7 +4498,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'lase to divide,
 
-    then extractt'
+    then extract'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da432aeaac3ca45b5b2236eb8b9cdc92, type: 2}
   m_sharedMaterial: {fileID: 7399884783584045447, guid: da432aeaac3ca45b5b2236eb8b9cdc92, type: 2}
@@ -5522,6 +5522,8 @@ MonoBehaviour:
 
     SPACE to lase
 
+    SCROLL to zoom
+
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da432aeaac3ca45b5b2236eb8b9cdc92, type: 2}
@@ -5549,8 +5551,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

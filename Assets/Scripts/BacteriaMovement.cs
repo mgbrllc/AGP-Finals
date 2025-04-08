@@ -7,7 +7,6 @@ public class BacteriaMovement : MonoBehaviour
 
     void Start()
     {
-        // Pick a random direction on spawn
         float angle = Random.Range(0f, 360f);
         float radians = angle * Mathf.Deg2Rad;
         moveDirection = new Vector2(Mathf.Cos(radians), Mathf.Sin(radians)).normalized;
@@ -15,7 +14,6 @@ public class BacteriaMovement : MonoBehaviour
 
     void Update()
     {
-        // Move the bacteria in the chosen direction
         transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
     }
 }
